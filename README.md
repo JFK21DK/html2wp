@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+# HTML to WordPress Posts Converter
 
-You can use the [editor on GitHub](https://github.com/h-jensen-dane/JFK21/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a simple Node.js script that uses the WordPress REST API ([wpapi](https://www.npmjs.com/package/wpapi)) in order to import HTML based articles as Posts in WordPress.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## How to Use
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Before using this script, HTTP Basic Authentication must be enabled. Install and activate the following plugin in your WordPress site:
 
-```markdown
-Syntax highlighted code block
+- [Basic-Auth](https://github.com/WP-API/Basic-Auth)
 
-# Header 1
-## Header 2
-### Header 3
+### Setup
 
-- Bulleted
-- List
+Install the dependencies using `yarn`:
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+$ yarn
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Configure
 
-### Jekyll Themes
+Create a copy of the `config.js.dist` as `config.js` and change the file according to your setup.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/h-jensen-dane/JFK21/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```bash
+$ cp config.js.dist config.js
+```
 
-### Support or Contact
+### Execute
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Run the script:
+
+```bash
+$ node ./index.js
+```
+
+
+## Requirements
+
+This script has been tested on Node.js version 8.9.4 and yarn version 1.3.2 has been used for dependency management.
