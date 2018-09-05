@@ -19,7 +19,11 @@ $ yarn
 
 ### Configure
 
-Change the values in the `config.js` file according to your setup.
+Create a copy of the `config.js.dist` as `config.js` and change the file according to your setup.
+
+```bash
+$ cp config.js.dist config.js
+```
 
 ### Execute
 
